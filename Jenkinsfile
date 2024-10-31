@@ -13,6 +13,7 @@ pipeline {
                 sh 'echo "Hello World"'
                 sh 'npm --version'
                 sh 'node --version'
+                sh 'npm cache clean --force'
                 sh 'npm ci'
                 sh 'npm run build'
             }
