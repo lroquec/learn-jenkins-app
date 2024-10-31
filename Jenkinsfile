@@ -10,7 +10,7 @@ pipeline {
                 }
             }
             steps {
-                sh ' echo "Hello World"'
+                sh 'echo "Hello World"'
                 sh 'npm --version'
                 sh 'node --version'
                 sh 'npm ci'
