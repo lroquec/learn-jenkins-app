@@ -6,13 +6,14 @@ pipeline {
             agent {
                 docker {
                     image 'node:18-alpine'
+                    reuseNode true
                 }
             }
             steps {
                 sh 'ls -la'
                 sh 'npm --version'
                 sh 'node --version'
-                sh 'npm ci --cache .npm --verbose'
+                sh 'npm ci --cache .npm'
                 sh 'npm run build'
             }
         }
