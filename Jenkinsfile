@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -12,6 +12,9 @@ pipeline {
             steps {
                 sh ' echo "Hello World"'
                 sh 'npm --version'
+                sh 'node --version'
+                sh 'npm ci'
+                sh 'npm run build'
             }
         }
     }
