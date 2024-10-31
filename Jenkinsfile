@@ -12,7 +12,7 @@ pipeline {
                 sh 'ls -la'
                 sh 'npm --version'
                 sh 'node --version'
-                sh 'npm ci --no-optional --prefer-offline'
+                sh 'npm ci --verbose'
                 sh 'npm run build'
             }
         }
