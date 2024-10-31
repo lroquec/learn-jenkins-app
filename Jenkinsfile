@@ -12,9 +12,7 @@ pipeline {
                 sh 'ls -la'
                 sh 'npm --version'
                 sh 'node --version'
-                sh 'rm -rf node_modules'
-                sh 'npm cache clean --force'
-                sh 'npm ci'
+                sh 'npm ci --no-optional --prefer-offline'
                 sh 'npm run build'
             }
         }
