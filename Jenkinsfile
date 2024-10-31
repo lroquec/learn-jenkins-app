@@ -10,7 +10,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'echo "Hello World"'
+                sh 'ls -la'
                 sh 'npm --version'
                 sh 'node --version'
                 sh 'npm cache clean --force'
